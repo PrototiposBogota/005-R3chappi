@@ -1,0 +1,40 @@
+<!--
+  Generated template for the ListarNoticiasEtiquetasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Noticias de {{titulo}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="card-background-page">
+
+  <ion-card *ngFor="let item of noticias" (click)="goNoticia(item.id)">
+
+    <img *ngIf="item?.imagen" src="{{item.imagen}}"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{item.titulo}}
+      </ion-card-title>
+      <p>
+        {{item.descripcion}}
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start (click)="goNoticia(item.id)">
+          <ion-icon name='share-alt'></ion-icon>
+          Leer mas
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
