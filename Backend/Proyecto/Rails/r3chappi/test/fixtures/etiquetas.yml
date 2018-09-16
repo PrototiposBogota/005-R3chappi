@@ -2,8 +2,8 @@
 
 one:
   nombre: MyString
-  administrador: one
+  usuario_back: one
 
 two:
   nombre: MyString
-  administrador: two
+  usuario_back: two
